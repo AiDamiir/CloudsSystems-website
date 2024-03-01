@@ -1,0 +1,45 @@
+.key-skills {
+	padding: 100px 0;
+
+	.key-skills__list {
+		gap: 30px;
+	}
+
+	.key-skills__item {
+		padding: 15px;
+		width: 300px;
+		border-radius: 10px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+			border-color 0.2s ease-in-out;
+
+		&:hover {
+			color: #000;
+			background-color: #fff;
+			border-color: #000;
+		}
+
+		&.hidden {
+			display: none;
+		}
+
+		h3 {
+			margin-bottom: 5px;
+			font-size: 20px;
+		}
+	}
+
+	.show {
+		margin-top: 80px;
+		padding: 15px 20px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+			border-color 0.2s ease-in-out;
+
+		&:hover {
+			color: #000;
+			background-color: #fff;
+			border-color: #000;
+		}
+	}
+}
