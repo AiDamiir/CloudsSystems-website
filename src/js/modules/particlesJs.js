@@ -1,5 +1,5 @@
 export const particlesJs = () => {
-	particlesJS('particles-js', {
+	window.particlesJS('particles-js', {
 		particles: {
 			number: {
 				value: 80,

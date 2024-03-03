@@ -22,6 +22,7 @@
 	}
 
 	.home-content {
+		padding: 0 15px;
 		position: absolute;
 		z-index: 2;
 		height: 100%;
@@ -32,13 +33,12 @@
 		justify-content: center;
 		flex-direction: column;
 
-		h2 {
-			font-size: 50px;
-			font-weight: 700;
+		b {
+			font-size: calc(30px + 20 * (100vw - 320px) / 1120);
 		}
 
 		p {
-			font-size: 30px;
+			font-size: calc(15px + 15 * (100vw - 320px) / 1120);
 		}
 	}
 }

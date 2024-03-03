@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
@@ -13,6 +15,10 @@
 html,
 body {
 	height: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -68,6 +74,10 @@ h6 {
 	font-size: inherit;
 }
 
+.lock {
+	overflow: hidden;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -86,12 +96,53 @@ h6 {
 }
 
 .title {
-	margin-bottom: 30px;
+	text-align: center;
+	margin-bottom: 25px;
 	font-weight: 700;
-	font-size: 40px;
+	font-size: calc(30px + 10 * (100vw - 320px) / 1120);
 }
 
 .description {
-	font-size: 22px;
+	font-size: calc(14px + 6 * (100vw - 320px) / 1120);
 	line-height: 150%;
+}
+
+.tooltip-horizontal-scroll-icon_hand {
+	animation: tooltip-horizontal-scroll-icon_anim-scroll-hand 2s infinite;
+}
+.tooltip-horizontal-scroll-icon_card {
+	animation: tooltip-horizontal-scroll-icon_anim-scroll-card 2s infinite;
+}
+@keyframes tooltip-horizontal-scroll-icon_anim-scroll-hand {
+	0% {
+		transform: translateX(80px) scale(1);
+		opacity: 0;
+	}
+	10% {
+		transform: translateX(80px) scale(1);
+		opacity: 1;
+	}
+	20%,
+	60% {
+		transform: translateX(175px) scale(0.6);
+		opacity: 1;
+	}
+	80% {
+		transform: translateX(5px) scale(0.6);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(5px) scale(0.6);
+		opacity: 0;
+	}
+}
+@keyframes tooltip-horizontal-scroll-icon_anim-scroll-card {
+	0%,
+	60% {
+		transform: translateX(0);
+	}
+	80%,
+	to {
+		transform: translateX(-240px);
+	}
 }

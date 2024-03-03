@@ -1,8 +1,13 @@
+@import './mixins';
+
+@import './politicy';
+
 // глобальные стили
 @import './globals';
 
 // layout
 @import './layout/header';
+@import './layout/footer';
 
 // секции
 @import './sections/home';
@@ -12,3 +17,4 @@
 @import './sections/key-skills';
 @import './sections/stack';
 @import './sections/completed-projects';
+@import './sections/contact';

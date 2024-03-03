@@ -1,5 +1,9 @@
 .completed-projects {
-	padding: 100px 0;
+	padding: 150px 0 50px 0;
+
+	@media (max-width: 400px) {
+		padding: 75px 0 75px 0;
+	}
 
 	.projects {
 		gap: 30px;
@@ -7,11 +11,19 @@
 
 	.project {
 		padding: 25px;
-		width: 450px;
+		width: 350px;
 		border-radius: 10px;
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
 			border-color 0.2s ease-in-out;
+
+		@media (max-width: 768px) {
+			width: 300px;
+		}
+
+		&.hidden {
+			display: none;
+		}
 
 		&:hover {
 			color: #000;
@@ -21,7 +33,7 @@
 
 		p {
 			margin-bottom: 5px;
-			font-size: 20px;
+			font-size: calc(15px + 3 * (100vw - 320px) / 1120);
 		}
 
 		ul {
@@ -29,8 +41,21 @@
 		}
 
 		ul li {
-			font-size: 20px;
 			list-style-type: disc;
+		}
+	}
+
+	.show {
+		margin-top: 40px;
+		padding: 15px 20px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+			border-color 0.2s ease-in-out;
+
+		&:hover {
+			color: #000;
+			background-color: #fff;
+			border-color: #000;
 		}
 	}
 }

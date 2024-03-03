@@ -1,5 +1,5 @@
 .about {
-	padding: 150px 0;
+	padding: 300px 0 150px 0;
 	text-align: center;
 
 	.container {
@@ -12,5 +12,9 @@
 
 	p {
 		margin-bottom: 10px;
+	}
+
+	@media (max-width: 400px) {
+		padding: 225px 0 225px 0;
 	}
 }

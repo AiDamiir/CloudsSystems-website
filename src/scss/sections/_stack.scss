@@ -1,5 +1,5 @@
 .stack {
-	padding: 100px;
+	padding: 100px 0;
 
 	h2 {
 		margin: 0 auto;
@@ -21,12 +21,19 @@
 		padding: 15px;
 		margin-bottom: 10px;
 		width: 100%;
-		font-size: 22px;
+		font-size: calc(18px + 4 * (100vw - 320px) / 1120);
 		text-align: start;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
-		&:hover {
+		@media (min-width: 998px) {
+			&:hover {
+				color: #000;
+				background-color: #fff;
+			}
+		}
+
+		&.show {
 			color: #000;
 			background-color: #fff;
 		}

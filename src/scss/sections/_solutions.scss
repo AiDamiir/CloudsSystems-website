@@ -1,46 +1,72 @@
 .solutions {
 	padding: 150px 0;
 
+	@media (max-width: 400px) {
+		padding: 75px 0 75px 0;
+	}
+
 	.solutions-head {
+		position: relative;
 		text-align: center;
-		margin-bottom: 50px;
+		padding-bottom: 50px;
 
 		.description {
 			max-width: 600px;
 		}
+
+		svg {
+			display: none;
+		}
+
+		@media (max-width: 1200px) {
+			svg {
+				display: block;
+				position: absolute;
+				right: 0;
+				bottom: -10%;
+			}
+		}
 	}
 
-	.card-container {
-		gap: 20px;
+	.swiper-container {
+		margin-left: auto;
+		margin-right: auto;
+		overflow: hidden;
 
-		.card {
-			padding: 20px;
-			width: calc(33.33% - 20px);
+		.swiper-slide {
+			max-width: 450px;
+			text-align: center;
 
-			h4 {
-				text-align: center;
-				font-size: 28px;
-				margin-bottom: 25px;
+			@media (max-width: 440px) {
+				max-width: 100%;
 			}
+		}
+	}
 
-			.image-container {
-				margin-bottom: 15px;
-				max-width: 410px;
-				max-height: 275px;
-				overflow: hidden;
-				border-radius: 10px;
+	.card {
+		padding: 20px;
 
-				.card-image {
-					max-width: 100%;
-					height: auto;
-				}
+		h4 {
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+
+		.image-container {
+			margin-bottom: 15px;
+			max-width: 100%;
+			max-height: 275px;
+			overflow: hidden;
+			border-radius: 10px;
+
+			img {
+				width: 100%;
 			}
+		}
 
-			.card-description {
-				text-align: justify;
-				font-size: 18px;
-				line-height: 150%;
-			}
+		.card-description {
+			text-align: justify;
+			font-size: calc(15px + 3 * (100vw - 320px) / 1120);
+			line-height: 150%;
 		}
 	}
 }
