@@ -1,5 +1,6 @@
 @import './mixins';
 
+// страницы
 @import './politicy';
 
 // глобальные стили
@@ -15,6 +16,9 @@
 @import './sections/solutions';
 @import './sections/team-experience';
 @import './sections/key-skills';
-@import './sections/stack';
 @import './sections/completed-projects';
 @import './sections/contact';
+
+// компоненты
+@import './components/popup';
+@import './components/button';
