@@ -1,7 +1,7 @@
 .popup-overlay {
 	display: flex;
 	position: fixed;
-	right: 0;
+	top: 0;
 	left: 0;
 	z-index: 20;
 	width: 100%;
@@ -9,13 +9,12 @@
 	backdrop-filter: blur(5px);
 	background-color: rgba(0, 0, 0, 0.5);
 	visibility: hidden;
-	overflow: hidden;
-	transition: opacity 0.3s ease, visibility 0s linear;
+	transition: opacity 0.3s ease-in-out, visibility 0;
 
 	&.hidden {
 		visibility: visible;
-		overflow: visible;
-		transition: opacity 0.3s ease, visibility 0s linear;
+		overflow-y: scroll;
+		transition: opacity 0.3s ease-in-out, visibility 0;
 	}
 
 	.popup {
@@ -30,7 +29,7 @@
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		background-color: #000;
 		opacity: 0;
-		transition: opacity 0.3s ease;
+		transition: opacity 0.3s ease-in-out;
 
 		p {
 			margin-bottom: 25px;
