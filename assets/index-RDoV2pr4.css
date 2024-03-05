@@ -480,6 +480,7 @@ html {
 	scroll-behavior: smooth;
 }
 body {
+	scroll-behavior: smooth;
 	color: #fff;
 	font-family: Open Sans;
 	background-color: #000;
