@@ -1,11 +1,12 @@
 .header {
+	margin: 0 15px;
 	padding: 25px 0;
 	position: fixed;
 	top: 0;
-	left: 0;
-	z-index: 10;
+	right: 0;
+	z-index: 3;
 	width: 100%;
-	backdrop-filter: blur(3px);
+	backdrop-filter: blur(2px);
 
 	.nav {
 		.nav-list {
@@ -30,6 +31,7 @@
 @media (max-width: 554px) {
 	.header {
 		padding: calc(10px + 10 * (100vw - 320px) / 1120) 0px;
+		margin: 0;
 
 		.container.d-flex {
 			justify-content: flex-start;

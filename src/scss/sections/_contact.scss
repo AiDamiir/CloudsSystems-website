@@ -16,6 +16,12 @@
 		input {
 			padding: 20px 15px;
 			background-color: #333333;
+			transition: background-color 0.2s ease-in-out;
+
+			&:hover,
+			&:focus {
+				background-color: #4e4e4e;
+			}
 
 			&::placeholder {
 				color: #888888;
@@ -27,6 +33,11 @@
 			height: 61.6px;
 			color: #fff;
 			background-color: #333333;
+			transition: background-color 0.2s ease-in-out;
+
+			&:hover {
+				background-color: #4e4e4e;
+			}
 		}
 	}
 
@@ -35,6 +46,11 @@
 		font-size: 14px;
 		a {
 			color: orangered;
+			transition: color 0.2s ease-in-out;
+
+			&:hover {
+				color: rgb(255, 118, 68);
+			}
 		}
 	}
 }

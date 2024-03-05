@@ -4,9 +4,11 @@
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
 		border-color 0.2s ease-in-out;
 
-	&:hover {
-		color: #000;
-		background-color: #fff;
-		border-color: #000;
+	@media (min-width: 768px) {
+		&:hover {
+			color: #000;
+			background-color: #fff;
+			border-color: #000;
+		}
 	}
 }

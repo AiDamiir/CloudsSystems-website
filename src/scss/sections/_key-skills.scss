@@ -1,22 +1,25 @@
 .key-skills {
-	padding: 100px 0;
+	padding: 130px 0 70px 0;
 
 	.key-skills__list {
 		gap: 30px;
+		max-width: 1400px;
 	}
 
 	.key-skills__item {
-		padding: 15px;
+		padding: 20px;
 		width: 300px;
 		border-radius: 10px;
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
 			border-color 0.2s ease-in-out;
 
-		&:hover {
-			color: #000;
-			background-color: #fff;
-			border-color: #000;
+		@media (min-width: 768px) {
+			&:hover {
+				color: #000;
+				background-color: #fff;
+				border-color: #000;
+			}
 		}
 
 		&.hidden {

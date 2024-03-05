@@ -12,52 +12,68 @@ document.addEventListener('DOMContentLoaded', () => {
 		'showMoreProjectsButton'
 	)
 	const hiddenSkills = document.querySelectorAll(
-		'.key-skills__item:nth-child(n+9)'
+		'.key-skills__item:nth-child(n+11)'
 	)
 	const hiddenProjects = document.querySelectorAll('.project:nth-child(n+7)')
 	let isExpanded = false
 
+	// раскрытие списка при клике на кнопку
 	function handleShowMoreSkillsButtonClick() {
 		hiddenSkills.forEach((item) => item.classList.toggle('hidden'))
 		showMoreSkillsButton.textContent =
 			showMoreSkillsButton.textContent === 'Показать еще'
 				? 'Скрыть'
 				: 'Показать еще'
+
+		if (showMoreSkillsButton.textContent === 'Показать еще') {
+			window.location.href = '#keySkills'
+		}
 	}
 
+	// раскрытие списка при клике на кнопку
 	function handleShowMoreProjectsButtonClick() {
 		hiddenProjects.forEach((project) => project.classList.toggle('hidden'))
 		showMoreProjectsButton.textContent = isExpanded ? 'Показать еще' : 'Скрыть'
 		isExpanded = !isExpanded
+
+		if (!isExpanded) {
+			window.location.href = '#completedProjects'
+		}
 	}
 
+	// клик на иконку меню (мобильная)
 	function handleMenuClick() {
 		menuNode.classList.toggle('show')
 		menuIcon.classList.toggle('active')
 		document.documentElement.classList.toggle('lock')
 	}
 
+	// клик на ссылку меню
 	function handleMenuLinkClick() {
 		menuNode.classList.remove('show')
 		menuIcon.classList.remove('active')
 		document.documentElement.classList.remove('lock')
 	}
 
+	// открытые модального окна
 	function openPopup() {
 		popup.classList.toggle('hidden')
 		document.documentElement.classList.toggle('lock')
 	}
 
+	// закрытие модального окна
 	function closePopup() {
 		popup.classList.remove('hidden')
 		document.documentElement.classList.toggle('lock')
 	}
 
+	// валидация формы
 	async function validateForm() {
 		const email = document.getElementById('contactFormEmail').value.trim()
 		const name = document.getElementById('contactFormUserName').value.trim()
 		const telephone = document.getElementById('contactFormPhone').value.trim()
 		const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+		const numericPattern = /^\+?\d+$/
 
 		if (!email || !name || !telephone) {
 			document.getElementById('popupMessage').innerHTML =
@@ -73,9 +89,17 @@ document.addEventListener('DOMContentLoaded', () => {
 			return false
 		}
 
+		if (!numericPattern.test(telephone)) {
+			document.getElementById('popupMessage').innerHTML =
+				'Пожалуйста, введите корректный номер телефона.'
+			openPopup()
+			return false
+		}
+
 		return true
 	}
 
+	// отправка формы
 	async function send(event) {
 		event.preventDefault()
 
@@ -101,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		} catch (error) {
 			console.error(error)
 			document.getElementById('popupMessage').innerHTML =
-				'Произошла ошибка при отправке данных. Пожалуйста, попробуйте снова позже.'
+				'Произошла ошибка при отправке данных. Пожалуйста, повторите попытку позже.'
 			openPopup()
 		}
 	}
