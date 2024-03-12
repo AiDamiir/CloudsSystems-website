@@ -1,15 +1,38 @@
 export const particlesJs = () => {
+	const bodyBackgroundColor = window
+		.getComputedStyle(document.body)
+		.getPropertyValue('background-color')
+
+	let particleColor, particleLineColor
+	if (bodyBackgroundColor === 'rgb(0, 0, 0)') {
+		particleColor = '#a1a1a1'
+		particleLineColor = '#8e8e8e'
+	} else {
+		particleColor = getComputedStyle(document.documentElement).getPropertyValue(
+			'--particleColor'
+		)
+		particleLineColor = getComputedStyle(
+			document.documentElement
+		).getPropertyValue('--particleLineColor')
+	}
+
+	document.documentElement.style.setProperty('--particleColor', particleColor)
+	document.documentElement.style.setProperty(
+		'--particleLineColor',
+		particleLineColor
+	)
+
 	window.particlesJS('particles-js', {
 		particles: {
 			number: {
-				value: 80,
+				value: 100,
 				density: {
 					enable: true,
 					value_area: 800,
 				},
 			},
 			color: {
-				value: '#d9d9d9',
+				value: particleColor.trim(),
 			},
 			shape: {
 				type: 'circle',
@@ -49,9 +72,9 @@ export const particlesJs = () => {
 			line_linked: {
 				enable: true,
 				distance: 150,
-				color: '#fff',
+				color: particleLineColor.trim(),
 				opacity: 1,
-				width: 1,
+				width: 2,
 			},
 			move: {
 				enable: true,

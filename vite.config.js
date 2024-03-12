@@ -5,6 +5,14 @@ import { defineConfig } from 'vite'
 export default defineConfig({
 	base: './',
 	plugins: [vuePlugin()],
+	server: {
+		watch: {
+			usePolling: true,
+		},
+		host: true,
+		strictPort: true,
+		port: 5000,
+	},
 	css: {
 		postcss: path.resolve(__dirname, './postcss.config.cjs'),
 	},

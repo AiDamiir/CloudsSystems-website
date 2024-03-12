@@ -1,5 +1,10 @@
 .politicy {
 	padding-block: calc(50px + 50 * (100vw - 320px) / 1120);
+	.container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
 
 	h1 {
 		margin-bottom: calc(40px + 10 * (100vw - 320px) / 1120);

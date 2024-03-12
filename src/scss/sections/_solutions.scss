@@ -6,6 +6,9 @@
 	}
 
 	.solutions-head {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		position: relative;
 		text-align: center;
 		padding-bottom: 50px;

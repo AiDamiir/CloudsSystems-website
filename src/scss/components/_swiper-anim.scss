@@ -1,0 +1,41 @@
+.tooltip-horizontal-scroll-icon_hand {
+	fill: var(--tooltipHand);
+	animation: tooltip-horizontal-scroll-icon_anim-scroll-hand 2s infinite;
+}
+.tooltip-horizontal-scroll-icon_card {
+	fill: var(--tooltipCard);
+	animation: tooltip-horizontal-scroll-icon_anim-scroll-card 2s infinite;
+}
+@keyframes tooltip-horizontal-scroll-icon_anim-scroll-hand {
+	0% {
+		transform: translateX(80px) scale(1);
+		opacity: 0;
+	}
+	10% {
+		transform: translateX(80px) scale(1);
+		opacity: 1;
+	}
+	20%,
+	60% {
+		transform: translateX(175px) scale(0.6);
+		opacity: 1;
+	}
+	80% {
+		transform: translateX(5px) scale(0.6);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(5px) scale(0.6);
+		opacity: 0;
+	}
+}
+@keyframes tooltip-horizontal-scroll-icon_anim-scroll-card {
+	0%,
+	60% {
+		transform: translateX(0);
+	}
+	80%,
+	to {
+		transform: translateX(-240px);
+	}
+}

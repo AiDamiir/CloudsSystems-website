@@ -1,17 +1,13 @@
 .about {
-	padding: 300px 0 150px 0;
-	text-align: center;
+	padding: 300px 0 190px 0;
 
 	.container {
 		max-width: 1020px;
 	}
 
-	.title {
-		text-align: center;
-	}
-
 	p {
 		margin-bottom: 10px;
+		text-align: center;
 	}
 
 	@media (max-width: 400px) {

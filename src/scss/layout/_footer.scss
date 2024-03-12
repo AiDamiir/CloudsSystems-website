@@ -1,6 +1,13 @@
 .footer {
 	padding: 100px 0 50px 0;
 
+	.container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+
 	.info {
 		display: flex;
 		flex-direction: column;
@@ -9,6 +16,8 @@
 
 	ul {
 		margin-top: 25px;
+		display: flex;
+		align-items: center;
 		gap: 15px;
 	}
 
