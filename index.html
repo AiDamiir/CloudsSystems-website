@@ -3,33 +3,46 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>CloudsSystems</title>
-		<link
-			rel="shortcut icon"
-			href="./assets/favicon-n7OtGQ2Q.ico"
-			type="image/x-icon"
+		<meta
+			name="description"
+			content="Обработка больших данных и машинное обучение для ускорения и оптимизации бизнеса. Предоставляем передовые решения для аналитики конкурентов, складской аналитики и аналитики маркетплейсов."
 		/>
+		<meta
+			name="keywords"
+			content="Революция в бизнесе, технологии, обработка больших данных, машинное обучение, аналитика конкурентов, складская аналитика, аналитика маркетплейсов, разработка ПО, интеграция систем, DataLake, DWH, ML модели, ETL процессы"
+		/>
+		<title>CloudsSystems</title>
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 		<link
 			rel="stylesheet"
 			href="https://unpkg.com/swiper/swiper-bundle.min.css"
 		/>
-		<script type="module" crossorigin src="./assets/index-DNu565ll.js"></script>
-		<link rel="stylesheet" crossorigin href="./assets/index-DQN3SBFs.css" />
+		<script type="module" crossorigin src="./assets/main-aabkGRVu.js"></script>
+		<link rel="stylesheet" crossorigin href="./assets/main-B3NuICZL.css">
 	</head>
 	<body>
 		<div class="wrapper">
 			<header class="header">
-				<div class="container d-flex justify-center">
+				<div class="container">
 					<nav class="nav">
-						<ul class="nav-list d-flex align-center">
-							<li><a href="#contact">Контакты</a></li>
-							<li><a href="#about">О нас</a></li>
-							<li class="logo"><a href="#home">CloudsSystems</a></li>
-							<li><a href="#completedProjects">Проекты</a></li>
-							<li><a href="#solutions">Решения</a></li>
+						<ul class="nav-list">
+							<li><a id="smoothScroll" href="#contact">Контакты</a></li>
+							<li><a id="smoothScroll" href="#about">О нас</a></li>
+							<li class="logo">
+								<a id="smoothScroll" href="#home">CloudsSystems</a>
+							</li>
+							<li>
+								<a id="smoothScroll" href="#completedProjects">Проекты</a>
+							</li>
+							<li><a id="smoothScroll" href="#solutions">Решения</a></li>
 						</ul>
 					</nav>
-					<div class="logo-mobile">CloudsSystems</div>
+					<button id="themeToggle" class="themeToggle">
+						<img id="themeIcon" src="./images/dark-theme-icon.svg" alt="" />
+					</button>
+					<a id="smoothScroll" class="logo-mobile" href="#home"
+						>CloudsSystems</a
+					>
 					<div id="handleMenu" class="menu-burger">
 						<svg
 							class="ham hamRotate ham1"
@@ -49,7 +62,14 @@
 						</svg>
 					</div>
 					<nav id="menu" class="nav-mobile">
-						<ul class="nav-list m-auto d-flex flex-column">
+						<button id="themeToggleMobile" class="themeToggle-mobile">
+							<img
+								id="themeIconMobile"
+								src="./images/dark-theme-icon.svg"
+								alt=""
+							/>
+						</button>
+						<ul class="nav-list">
 							<li><a id="navLink" href="#about">О нас</a></li>
 							<li><a id="navLink" href="#completedProjects">Проекты</a></li>
 							<li><a id="navLink" href="#solutions">Решения</a></li>
@@ -60,10 +80,12 @@
 			</header>
 			<main class="main">
 				<section id="home" class="home">
-					<div id="particles-js" class="animation d-flex flex-column"></div>
+					<div id="particles-js" class="animation"></div>
 					<div class="home-content">
-						<p class="text-center"><b>Революция в бизнесе и технологиях</b></p>
-						<p>Воплотите свои цели в реальность</p>
+						<h1 class="description">
+							<b>Революция в бизнесе и технологиях</b>
+						</h1>
+						<p class="description">Воплотите свои цели в реальность</p>
 					</div>
 				</section>
 				<section id="about" class="about">
@@ -85,7 +107,7 @@
 				</section>
 				<section id="solutions" class="solutions">
 					<div class="container">
-						<div class="solutions-head d-flex flex-column align-center">
+						<div class="solutions-head">
 							<h3 class="title">Наши решения</h3>
 							<p class="description">
 								Мы помогаем нашим клиентам эффективно развивать свой бизнес и
@@ -104,7 +126,6 @@
 									width="200"
 									height="200"
 									rx="5"
-									fill="rgba(255,255,255,0.2)"
 								></rect>
 								<rect
 									class="tooltip-horizontal-scroll-icon_card"
@@ -112,7 +133,6 @@
 									width="200"
 									height="200"
 									rx="5"
-									fill="rgba(255,255,255,0.2)"
 								></rect>
 								<rect
 									class="tooltip-horizontal-scroll-icon_card"
@@ -120,12 +140,10 @@
 									width="200"
 									height="200"
 									rx="5"
-									fill="rgba(255,255,255,0.2)"
 								></rect>
 								<path
 									class="tooltip-horizontal-scroll-icon_hand"
 									d="M78.9579 285.7C78.9579 285.7 37.8579 212.5 20.5579 180.8C-2.44209 138.6 -6.2422 120.8 9.6579 112C19.5579 106.5 33.2579 108.8 41.6579 123.4L61.2579 154.6V32.3C61.2579 32.3 60.0579 0 83.0579 0C107.558 0 105.458 32.3 105.458 32.3V91.7C105.458 91.7 118.358 82.4 133.458 86.6C141.158 88.7 150.158 92.4 154.958 104.6C154.958 104.6 185.658 89.7 200.958 121.4C200.958 121.4 236.358 114.4 236.358 151.1C236.358 187.8 192.158 285.7 192.158 285.7H78.9579Z"
-									fill="rgba(255,255,255,1)"
 								></path>
 							</svg>
 						</div>
@@ -135,7 +153,7 @@
 									<div class="card">
 										<h4><b>Аналитика конкурентов</b></h4>
 										<div class="image-container">
-											<img src="./assets/selutions1-Cpj1k-Sn.jpg" alt="" />
+											<img src="./images/selutions1.jpg" alt="" />
 										</div>
 										<p class="card-description">
 											Мы предлагаем передовую аналитику конкурентов, используя
@@ -151,7 +169,7 @@
 									<div class="card">
 										<h4><b>Аналитика склада</b></h4>
 										<div class="image-container">
-											<img src="./assets/selutions2-DcYP_VYz.jpg" alt="" />
+											<img src="./images/selutions2.jpg" alt="" />
 										</div>
 										<p class="card-description">
 											Наши решения для складской аналитики оптимизируют
@@ -168,7 +186,7 @@
 									<div class="card">
 										<h4><b>Аналитика маркетплейсов</b></h4>
 										<div class="image-container">
-											<img src="./assets/selutions3-BWjEtJV8.jpg" alt="" />
+											<img src="./images/selutions3.jpg" alt="" />
 										</div>
 										<p class="card-description">
 											Наша аналитика для маркетплейсов автоматически пополняет
@@ -198,9 +216,9 @@
 					</div>
 				</section>
 				<section id="keySkills" class="key-skills">
-					<div class="container d-flex flex-column align-center">
+					<div class="container">
 						<h2 class="title">Ключевые навыки</h2>
-						<ul class="key-skills__list d-flex flex-wrap justify-center">
+						<ul class="key-skills__list">
 							<li class="key-skills__item">
 								<h3><b>Интеграция с внешними системами по API</b></h3>
 								<p>
@@ -355,9 +373,9 @@
 				</section>
 
 				<section id="completedProjects" class="completed-projects">
-					<div class="container d-flex flex-column">
-						<h2 class="title m-auto">Выполненные проекты</h2>
-						<div class="projects d-flex flex-wrap justify-center">
+					<div class="container">
+						<h2 class="title">Выполненные проекты</h2>
+						<div class="projects">
 							<div class="project">
 								<p><b>Проект:</b> Разработка и внедрение СКУД систем</p>
 								<p><b>Отрасль:</b> Строительный сектор</p>
@@ -520,7 +538,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="d-flex justify-center">
+						<div class="buttonBody">
 							<button id="showMoreProjectsButton" class="button">
 								Показать еще
 							</button>
@@ -528,14 +546,14 @@
 					</div>
 				</section>
 				<section id="contact" class="contact">
-					<div class="container d-flex align-center flex-column">
+					<div class="container">
 						<h2 class="title">Свяжитесь с нами сегодня</h2>
 						<p class="description">
 							Чтобы узнать, как мы можем помочь вашему бизнесу развиваться
 							быстрее и эффективнее.
 						</p>
-						<form class="form d-flex align-center" novalidate>
-							<div class="form-inner d-flex">
+						<form class="form" novalidate>
+							<div class="form-inner">
 								<input
 									id="contactFormEmail"
 									type="email"
@@ -565,7 +583,7 @@
 						<p class="privacy-policy">
 							Нажимая на кнопку "Отправить", Вы даете согласие на обработку
 							персональных данных и соглашаетесь
-							<a href="politicy.html" target="_blank"
+							<a href="./privacy_policy.html" target="_blank"
 								>c политикой конфиденциальности.</a
 							>
 						</p>
@@ -573,19 +591,19 @@
 				</section>
 			</main>
 			<footer class="footer">
-				<div class="container d-flex align-center flex-column text-center">
+				<div class="container">
 					<h2 class="title">Контакты</h2>
 					<div class="info">
 						<p>Phone: +7 964 902 73 67</p>
 						<p>Email: i@cloudssystems.ru</p>
 					</div>
-					<ul class="d-flex align-center">
+					<ul>
 						<li>
 							<a
 								href="https://t.me/marvellvs"
 								target="_blank"
 								class="socialItem"
-								><img src="./assets/telegram-BaiAteeE.png" alt=""
+								><img src="./images/social/telegram.png" alt=""
 							/></a>
 						</li>
 						<li>
@@ -593,7 +611,7 @@
 								href="https://api.whatsapp.com/send/?phone=79649027367&text&type=phone_number&app_absent=0"
 								target="_blank"
 								class="socialItem"
-								><img src="./assets/whatsapp-Da--EUb-.png" alt=""
+								><img src="./images/social/whatsapp.png" alt=""
 							/></a>
 						</li>
 					</ul>
@@ -606,8 +624,7 @@
 				</div>
 			</div>
 		</div>
-
-		<script src="./assets/particles.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	</body>
 </html>
