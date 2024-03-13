@@ -25,7 +25,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Переменные состояния
 	let isExpanded = false
-	let isLightTheme = false
+	let isLightTheme =
+		window.matchMedia &&
+		window.matchMedia('(prefers-color-scheme: light)').matches
+
+	// Включена ли белая тема в браузере
+	if (isLightTheme) {
+		document.getElementById('themeIcon').src = './images/light-theme-icon.svg'
+		document.getElementById('themeIconMobile').src =
+			'./images/light-theme-icon-mobile.svg'
+	}
 
 	// Обработчик переключения темы
 	function handleThemeToggle() {

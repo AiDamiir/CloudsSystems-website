@@ -12,22 +12,52 @@
 	--cardBorder: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.light-theme {
-	--primaryColor: #fff;
-	--secondaryColor: #000;
-	--particleColor: #a1a1a1;
-	--particleLineColor: #8e8e8e;
-	--tooltipCard: rgba(0, 0, 0, 1);
-	--tooltipHand: rgba(255, 255, 255, 1);
-	--overlayColor: rgba(0, 0, 0, 0);
-	--formColor: #d9d9d9;
-	--formHoverColor: #bababa;
-	--placeholderColor: #000;
-	--cardBorder: 1px solid rgba(0, 0, 0, 0.2);
-}
-
 @media (prefers-color-scheme: light) {
 	:root {
+		--primaryColor: #fff;
+		--secondaryColor: #000;
+		--particleColor: #a1a1a1;
+		--particleLineColor: #8e8e8e;
+		--tooltipCard: rgba(0, 0, 0, 1);
+		--tooltipHand: rgba(255, 255, 255, 1);
+		--overlayColor: rgba(0, 0, 0, 0);
+		--formColor: #d9d9d9;
+		--formHoverColor: #bababa;
+		--placeholderColor: #000;
+		--cardBorder: 1px solid rgba(0, 0, 0, 0.2);
+	}
+
+	.light-theme {
+		--primaryColor: #000;
+		--secondaryColor: #fff;
+		--particleColor: #d9d9d9;
+		--particleLineColor: #fff;
+		--tooltipCard: rgba(255, 255, 255, 0.2);
+		--tooltipHand: rgba(255, 255, 255, 1);
+		--overlayColor: rgba(0, 0, 0, 0.3);
+		--formColor: #333333;
+		--formHoverColor: #4e4e4e;
+		--placeholderColor: #888888;
+		--cardBorder: 1px solid rgba(255, 255, 255, 0.2);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--primaryColor: #000;
+		--secondaryColor: #fff;
+		--particleColor: #d9d9d9;
+		--particleLineColor: #fff;
+		--tooltipCard: rgba(255, 255, 255, 0.2);
+		--tooltipHand: rgba(255, 255, 255, 1);
+		--overlayColor: rgba(0, 0, 0, 0.3);
+		--formColor: #333333;
+		--formHoverColor: #4e4e4e;
+		--placeholderColor: #888888;
+		--cardBorder: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.light-theme {
 		--primaryColor: #fff;
 		--secondaryColor: #000;
 		--particleColor: #a1a1a1;
