@@ -60,8 +60,8 @@ export const particlesJs = () => {
 				},
 			},
 			size: {
-				value: 2,
-				random: false,
+				value: 3,
+				random: true,
 				anim: {
 					enable: false,
 					speed: 40,
@@ -74,7 +74,7 @@ export const particlesJs = () => {
 				distance: 150,
 				color: particleLineColor.trim(),
 				opacity: 1,
-				width: 2,
+				width: 3,
 			},
 			move: {
 				enable: true,

@@ -15,6 +15,13 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 30px;
+		opacity: 0;
+
+		&.animate {
+			opacity: 1;
+			transition: opacity 0.4s ease-in-out;
+			transition-delay: 0.2s;
+		}
 	}
 
 	.project {
@@ -58,5 +65,13 @@
 
 	.button {
 		margin-top: 40px;
+		opacity: 0;
+
+		&.animate {
+			opacity: 1;
+			transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+			transform: translateY(-15px);
+			transition-delay: 0.2s;
+		}
 	}
 }

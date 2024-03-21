@@ -29,14 +29,20 @@
 				min-width: calc(60px + 17 * (100vw - 554px) / 886);
 				transition: color 0.2s ease-in-out;
 
-				&:hover {
+				&:hover,
+				&.active {
 					color: #ff4500;
 				}
 			}
 		}
 
 		.logo {
+			text-align: center;
+			transition: color 0.2s ease-in-out;
 			font-size: calc(18px + 6 * (100vw - 768px) / 672);
+			&:hover {
+				color: #ff4500;
+			}
 		}
 	}
 	.menu-burger {

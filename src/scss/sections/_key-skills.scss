@@ -13,6 +13,13 @@
 		justify-content: center;
 		gap: 30px;
 		max-width: 1400px;
+		opacity: 0;
+
+		&.animate {
+			opacity: 1;
+			transition: opacity 0.4s ease-in-out;
+			transition-delay: 0.2s;
+		}
 	}
 
 	.key-skills__item {
@@ -43,5 +50,13 @@
 
 	.button {
 		margin-top: 80px;
+		opacity: 0;
+
+		&.animate {
+			opacity: 1;
+			transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+			transform: translateY(-15px);
+			transition-delay: 0.2s;
+		}
 	}
 }

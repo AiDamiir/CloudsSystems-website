@@ -17,6 +17,14 @@
 		margin-bottom: 20px;
 		display: flex;
 		align-items: center;
+		opacity: 0;
+
+		&.animate {
+			opacity: 1;
+			transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+			transform: translateY(-15px);
+			transition-delay: 0.2s;
+		}
 
 		.form-inner {
 			display: flex;
@@ -54,6 +62,15 @@
 	.privacy-policy {
 		text-align: center;
 		font-size: 14px;
+		opacity: 0;
+
+		&.animate {
+			opacity: 1;
+			transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+			transform: translateY(-15px);
+			transition-delay: 0.2s;
+		}
+
 		a {
 			color: #ff4500;
 			transition: color 0.2s ease-in-out;
